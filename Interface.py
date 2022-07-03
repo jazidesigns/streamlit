@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 from PIL import Image
 
-loaded_model = pickle.load(open("C:/Users/Jazi Designs/Python/Project Final/voting_classifier.sav", "rb"))
+loaded_model = pickle.load(open("https:/github.com/jazidesigns/streamlit/blob/main/voting_classifier.sav", "rb"))
 
 def risk_prediction(input_data):
     prediction = loaded_model.predict(input_data)
@@ -34,7 +34,7 @@ def main():
     st.success(prediction)
 
 st.title("Maternal Health Risk Prediction")
-img = Image.open("C:/Users/Jazi Designs/Python/Project Final/maternal-health.png")
+img = Image.open("https:/github.com/jazidesigns/streamlit/blob/main/maternal-health.png")
 st.image(img)    
 
 if __name__ == "__main__":
